@@ -1,16 +1,17 @@
 import React from "react";
-import { useDispatch } from 'react-redux';
 import { ReactComponent as Star } from "../../assets/star.svg";
 import { ReactComponent as StarBorder } from "../../assets/star_border.svg";
 import { ReactComponent as StarHalf } from "../../assets/start_half.svg";
-import { addItem } from '../../redux/cartSlice.js';
+import RouterLink from '../link/RouterLink'
 
-const ProductCard = ({ title, price, count, imgUrl, rate, productId ,active}) => {
 
-  const dispatch = useDispatch()
+const ProductCard = ({ title, price, count, imgUrl, rate, productId}) => {
+
 
   const formatedPrice = price.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
   const splitPrice = formatedPrice.split('.')
+
+  const link = `/product/${productId}`
   
   /* 
 
@@ -22,6 +23,7 @@ const ProductCard = ({ title, price, count, imgUrl, rate, productId ,active}) =>
     npm i react-number-format
     Use it in your React Native app like this:
     import NumberFormat from 'react-number-format';
+import RouterLink from './../link/RouterLink';
 
     export function ReactNativeNumberFormat({ value }) {
       return (
@@ -133,6 +135,7 @@ const ProductCard = ({ title, price, count, imgUrl, rate, productId ,active}) =>
 
   return (
     <div className="productCard">
+      <RouterLink to={link}>
       <img variant="top" src={imgUrl} className="productCard__img" alt="alex" />
       <div className="productCard__body">
         <div className="productCard__body__title">{title}</div>
@@ -145,8 +148,8 @@ const ProductCard = ({ title, price, count, imgUrl, rate, productId ,active}) =>
             <span className="productCard__body__count">{`(${count})`}</span>
           </span>
         </div>
-        <button onClick={() => dispatch((addItem({ title, price, count, imgUrl, rate, productId,active })))} className="productCard__body__button">Add to Cart</button>
       </div>
+      </RouterLink>
     </div>
   );
 };

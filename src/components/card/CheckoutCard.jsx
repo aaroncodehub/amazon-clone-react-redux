@@ -2,6 +2,7 @@ import React from "react";
 import { Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { updateItemQuantity, removeItem } from "../../redux/cartSlice";
+import RouterLink from "../link/RouterLink";
 
 const CheckoutCard = ({
   imgUrl,
@@ -11,22 +12,24 @@ const CheckoutCard = ({
   title,
   quantity,
 }) => {
-
   const dispatch = useDispatch();
   const formatedPrice = price.toLocaleString("en-US", {
     style: "currency",
     currency: "USD",
   });
 
+  const link = `/product/${productId}`
+
   const updateQuantity = (e) => {
-      const itemQuantity = e.target.value
-    dispatch(updateItemQuantity({productId,quantity: parseInt(itemQuantity)}));
-    
+    const itemQuantity = e.target.value;
+    dispatch(
+      updateItemQuantity({ productId, quantity: parseInt(itemQuantity) })
+    );
   };
 
   const removeCartItem = () => {
-      dispatch(removeItem(productId))
-  }
+    dispatch(removeItem(productId));
+  };
 
   return (
     <div className="checkout-card">
@@ -34,7 +37,9 @@ const CheckoutCard = ({
       <div className="checkout-card__body">
         <div className="checkout-card__content">
           <div className="checkout-card__title">
-            <span>{title}</span>
+            <RouterLink to={link} style={{color:'#0167C0'}}>
+              <span>{title}</span>
+            </RouterLink>
           </div>
           <div className="checkout-card__status">
             {active ? <span>In stock</span> : <span>Out of stock</span>}
