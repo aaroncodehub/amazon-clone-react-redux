@@ -1,0 +1,20 @@
+.carousel {
+    width: 100%;
+    margin: 1rem auto;
+    &__item{
+        display: flex !important;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        &__img{
+            margin: 0 1rem;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        &__link {
+            transform: translateY(-.3rem);
+        }
+    }
+}
