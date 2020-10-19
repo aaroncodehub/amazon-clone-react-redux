@@ -8,6 +8,7 @@ import Register from "./views/auth/Register";
 import Login from "./views/auth/Login";
 import AuthLayout from "./layouts/AuthLayout";
 import Checkout from "./views/checkout/Checkout";
+import Product from "./views/product/Product";
 
 
 const routes = [
@@ -22,7 +23,10 @@ const routes = [
       {
         path:'checkout',
         element: <Checkout/>
-
+      },
+      {
+        path: 'product/:productId',
+        element: <Product/>
       },
       {
         path: "404",
