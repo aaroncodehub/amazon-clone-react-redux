@@ -9,6 +9,13 @@ import Login from "./views/auth/Login";
 import AuthLayout from "./layouts/AuthLayout";
 import Checkout from "./views/checkout/Checkout";
 import Product from "./views/product/Product";
+import Payment from "./views/payment/Payment";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const promise = loadStripe(
+  "pk_test_51HeTtQImEgmfO9dx3rV5DTtE8sIiZOUG8KZbdXdfOEAzOG54ej7Xivl2kXmgMrHGV8dLRSlLioJ56v4KbB0bkMnP00UWd0uuAL"
+);
 
 
 const routes = [
@@ -23,6 +30,10 @@ const routes = [
       {
         path:'checkout',
         element: <Checkout/>
+      },
+      {
+        path: 'payment',
+        element: <Elements stripe={promise}><Payment/></Elements>
       },
       {
         path: 'product/:productId',

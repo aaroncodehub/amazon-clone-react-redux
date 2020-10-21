@@ -55,7 +55,7 @@ const Header = () => {
         <div className="header__nav">
           <RouterLink to={!user ? "/auth" : ""}>
             <div onClick={signOut} className="header__nav__option">
-              <span>Hello {user && user.name} </span>
+              <span>Hello {user ? user.name : "Guest"} </span>
               <span>{user ? "Sign Out" : "Sign In"}</span>
             </div>
           </RouterLink>

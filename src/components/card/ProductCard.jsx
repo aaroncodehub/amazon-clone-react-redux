@@ -13,31 +13,6 @@ const ProductCard = ({ title, price, count, imgUrl, rate, productId}) => {
 
   const link = `/product/${productId}`
   
-  /* 
-
-    The other fastest way is to use react-number-format, as stated above, but don't forget the renderText prop so that React Native don't throw rendering error.
-
-    Follow this step:
-
-    Install. Use this command:
-    npm i react-number-format
-    Use it in your React Native app like this:
-    import NumberFormat from 'react-number-format';
-import RouterLink from './../link/RouterLink';
-
-    export function ReactNativeNumberFormat({ value }) {
-      return (
-        <NumberFormat
-          value={value}
-          displayType={'text'}
-          thousandSeparator={true}
-          prefix={'$'}
-          renderText={formattedValue => <Text>{formattedValue}</Text>} // <--- Don't forget this!
-        />
-      );
-    }
-  */
-  
   const renderStar = (rate) => {
     switch (rate) {
       case 1:

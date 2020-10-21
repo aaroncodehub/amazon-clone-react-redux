@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="home__hero">
-        <Carousel>
+        <Carousel  slide={false} fade={false}>
           <Carousel.Item>
             <img
               className="d-block w-100"

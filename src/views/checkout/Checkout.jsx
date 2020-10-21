@@ -5,12 +5,14 @@ import { selectCartItems } from "../../redux/cartSelector";
 import { useSelector } from "react-redux";
 import { selectCartItemsCount, selectSubtotal } from "../../redux/cartSelector";
 import RouterLink from "../../components/link/RouterLink";
+import {useNavigate} from 'react-router-dom';
 
 const Checkout = () => {
   const cartItems = useSelector((state) => selectCartItems(state));
   const cartCount = useSelector((state) => selectCartItemsCount(state));
   const subtotal = useSelector((state) => selectSubtotal(state));
 
+  const navigate = useNavigate();
   const formatedSubtotal = subtotal.toLocaleString("en-US", {
     style: "currency",
     currency: "USD",
@@ -60,7 +62,7 @@ const Checkout = () => {
           <span>{formatedSubtotal}</span>
         </div>
         <div>
-          <Button block className="checkout__subtotal__button">
+          <Button block className="checkout__subtotal__button" onClick={() => navigate('/payment')}>
             Proceed to checkout
           </Button>
         </div>
