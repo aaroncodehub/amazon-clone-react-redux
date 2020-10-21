@@ -35,10 +35,13 @@ const Payment = () => {
         // Stripe expects the total in a currencies subunits
         url: `/payments/create?total=${subtotal * 100}`,
       });
+      
       setClientSecret(response.data.clientSecret);
     };
     getClientSecret();
   }, [subtotal]);
+
+ 
 
   const handleSubmit = async (event) => {
     event.preventDefault();
