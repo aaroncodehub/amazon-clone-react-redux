@@ -59,11 +59,12 @@ const Header = () => {
               <span>{user ? "Sign Out" : "Sign In"}</span>
             </div>
           </RouterLink>
-
-          <div className="header__nav__option">
-            <span>returns</span>
-            <span>&orders</span>
-          </div>
+          <RouterLink to='/orders'>
+            <div className="header__nav__option">
+              <span>returns</span>
+              <span>&orders</span>
+            </div>
+          </RouterLink>
           <RouterLink to="/checkout">
             <div className="header__nav__cart">
               <span>{cartCount}</span>

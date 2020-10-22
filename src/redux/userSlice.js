@@ -22,7 +22,7 @@ export const fetchUser = (uid) => {
       .get()
       .then((doc) => {
         if (doc.exists) {
-          dispatch(setUser(doc.data()));
+          dispatch(setUser({...doc.data(), uid: doc.id}));
         } else {
           console.log("No user found !");
         }

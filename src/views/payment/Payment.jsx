@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from "react";
-import {useNavigate} from 'react-router-dom';
-import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import { selectUser } from "../../redux/userSlice";
+import { emptyCart } from "../../redux/cartSlice";
 import CheckoutCard from "../../components/card/CheckoutCard";
-import { selectCartItems } from "../../redux/cartSelector";
-import { selectCartItemsCount, selectSubtotal } from "../../redux/cartSelector";
+import {
+  selectCartItemsCount,
+  selectSubtotal,
+  selectCartItems,
+} from "../../redux/cartSelector";
 import { Link } from "react-router-dom";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import axios from "../../axios";
+import { db } from "../../firebase.utils";
 
 const Payment = () => {
-
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const user = useSelector(selectUser);
   const cartItems = useSelector((state) => selectCartItems(state));
@@ -35,29 +40,39 @@ const Payment = () => {
         // Stripe expects the total in a currencies subunits
         url: `/payments/create?total=${subtotal * 100}`,
       });
-      
+
       setClientSecret(response.data.clientSecret);
     };
     getClientSecret();
   }, [subtotal]);
-
- 
-
+console.log(clientSecret)
   const handleSubmit = async (event) => {
     event.preventDefault();
     setProcessing(true);
 
-      const payload = await stripe.confirmCardPayment(clientSecret, {
-          payment_method: {
-            card: elements.getElement(CardElement)
-        }
-      }).then(({ paymentIntent }) => {
-          // paymentIntent = payment confirmation
-          setSucceeded(true)
-          setError(null)
-          setProcessing(false)
-          navigate('/orders')
-    })
+    await stripe
+      .confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement),
+        },
+      })
+      .then(({ paymentIntent }) => {
+        // paymentIntent = payment confirmation
+        db.collection("users")
+          .doc(user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            cartItems,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
+        setSucceeded(true);
+        setError(null);
+        setProcessing(false);
+        dispatch(emptyCart());
+        navigate("/orders");
+      });
   };
 
   const handleChange = (event) => {
@@ -92,7 +107,7 @@ const Payment = () => {
             {cartItems.length > 0 &&
               cartItems.map(({ productId, ...props }) => (
                 <div key={productId}>
-                  <CheckoutCard productId={productId} {...props} />
+                  <CheckoutCard productId={productId} hiddenAction {...props} />
                   <div className="checkout__cart__card" />
                 </div>
               ))}

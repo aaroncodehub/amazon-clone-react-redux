@@ -11,6 +11,7 @@ const CheckoutCard = ({
   active,
   title,
   quantity,
+  hiddenAction
 }) => {
   const dispatch = useDispatch();
   const formatedPrice = price.toLocaleString("en-US", {
@@ -47,7 +48,8 @@ const CheckoutCard = ({
           <div className="checkout-card__delivery">
             <span>Enable for FREE Delivery </span>
           </div>
-          <div className="checkout-card__action">
+          {
+            !hiddenAction &&           <div className="checkout-card__action">
             <div className="checkout-card__action__qty">
               <Form>
                 <Form.Group>
@@ -65,6 +67,7 @@ const CheckoutCard = ({
               <span onClick={removeCartItem}> Delete</span>
             </div>
           </div>
+}
         </div>
         <div className="checkout-card__price">
           <span>{formatedPrice}</span>

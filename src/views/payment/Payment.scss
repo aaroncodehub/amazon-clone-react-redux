@@ -28,4 +28,23 @@
   &__address, &__items,&__details {
       flex: 0.8;
   }
+
+  &__details > form {
+    max-width: 400px;
+  }
+  
+  &__details > h3 {
+    padding-bottom: 20px;
+  }
+  &__details > form > div > button{
+    background: #f0c14b;
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    font-weight: bold;
+    margin-top: 10px;
+    border-color: #a88724 #9c7e31 #846a29;
+    color: #111;
+  }
 }

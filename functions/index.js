@@ -15,7 +15,7 @@ const stripe = require("stripe")('sk_test_51HeTtQImEgmfO9dxsYTv9vHitaqlfq2bW9QkR
 const app = express();
 
 // - Middlrwares
-app.use(cors({ origin: true }))
+app.use(cors())
 app.use(express.json());
 
 // - API Routes
