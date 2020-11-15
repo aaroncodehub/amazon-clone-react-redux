@@ -3,6 +3,7 @@ import homeHeroShip from "../../assets/home-bg-ship.jpg";
 import homeHeroPrime from "../../assets/home-bg-prime.jpg";
 import homeHeroComputer from "../../assets/home-bg-computer.jpg";
 import homeHeroAlexa from "../../assets/home-bg-alexa.jpg";
+import homeHeroNZ from '../../assets/home-bg-nz.jpg'
 import { Carousel } from "react-bootstrap";
 import ShopBySection from "../../components/home/ShopBySection";
 import DiscoverSection from "../../components/home/DiscoverSection";
@@ -16,6 +17,13 @@ const Home = () => {
     <div className="home">
       <div className="home__hero">
         <Carousel  slide={false} fade={false}>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={homeHeroNZ}
+              alt="Amazon NZ"
+            />
+          </Carousel.Item>
           <Carousel.Item>
             <img
               className="d-block w-100"

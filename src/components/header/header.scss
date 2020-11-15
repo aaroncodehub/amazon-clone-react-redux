@@ -31,14 +31,18 @@
     background-color: $secondary-color-main;
     border-radius: .2rem;
 
+    & button {
+        display: none;
+    }
+
     &__category {
         background-color: $background-color  !important;
-        width: 6rem !important;
+        width: 8rem !important;
     }
 
     &__icon {
-      width: 2.4rem;
-      height: 2.4rem;
+      width: 2.3rem;
+      height: 2.3rem;
       fill: $primary-color-light;
       padding: .5rem;
     }

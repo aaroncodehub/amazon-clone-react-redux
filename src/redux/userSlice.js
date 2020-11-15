@@ -17,12 +17,12 @@ export const userSlice = createSlice({
 
 export const fetchUser = (uid) => {
   return (dispatch) => {
-    const userRef = db.doc(`users/${uid}`);
+    const userRef = db.doc(`amazonUsers/${uid}`);
     userRef
       .get()
       .then((doc) => {
         if (doc.exists) {
-          dispatch(setUser({...doc.data(), uid: doc.id}));
+          dispatch(setUser({name: doc.data().name, email: doc.data().email, uid: doc.id}));
         } else {
           console.log("No user found !");
         }

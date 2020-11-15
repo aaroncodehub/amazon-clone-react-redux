@@ -23,9 +23,9 @@ export const auth = firebase.auth();
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 
-  const userRef = db.doc(`users/${userAuth.user.uid}`);
+  const userRef = db.doc(`amazonUsers/${userAuth.user.uid}`);
   const { displayName, email } = userAuth.user;
-  const createdAt = new Date();
+
 
   const snapShot = await userRef.get();
   if (snapShot.exists) return;
@@ -34,7 +34,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     await userRef.set({
       displayName,
       email,
-      createdAt:createdAt.toString(),
+      timestamp:firebase.firestore.FieldValue.serverTimestamp(),
       ...additionalData,
     });
   } catch (err) {

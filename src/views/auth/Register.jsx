@@ -71,7 +71,7 @@ const Register = () => {
               createUserProfileDocument(user, { name: values.name });
               setLoading(false);
             })
-            .then(() => navigate("/login"))
+            .then(() => navigate('/auth'))
             .catch((err) => {
               setError(err.message);
               setLoading(false);
