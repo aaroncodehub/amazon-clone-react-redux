@@ -1,14 +1,21 @@
 .product {
-  display: flex;
+
+  @include breakpoint(l) {
+
+    display: flex;
+  }
   justify-content: space-between;
   margin: 2rem 1rem;
-  &__img-gallery {
-    flex-basis: 40%;
+  &__gallery {
+    flex-basis: 50%;
+    margin-right: 3rem;
+    width: fit-content;
+    overflow: hidden;
   }
   &__description {
     display: flex;
     flex-direction: column;
-    flex-basis: 50%;
+    flex-basis: 40%;
     &__title {
       font-weight: 600;
       font-size: 1.1rem;
@@ -36,6 +43,15 @@
       width: 100%;
       margin-left: 0.5rem;
       margin: 1.5rem 0;
+    }
+
+    &__content  li {
+      padding-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    &__content {
+      padding-left: 1rem;
     }
   }
   &__cart {

@@ -1,61 +1,29 @@
 import React from "react";
 import SharedCarousel from "../carousel/Carousel";
-import { v4 as uuid } from 'uuid';
+import { v4 as uuid } from "uuid";
+import { selectProducts } from "../../redux/productsSlice";
+import { useSelector } from "react-redux";
 
-const discovers = [
-  {
-    id:uuid(),
-    title: "Best Sellers",
-    linkInfo:"Shop now",
-    imgs: [
-      {
-        id:uuid(),
-        imgUrl:
-          "https://m.media-amazon.com/images/I/31GbZBZ6UfL._AC_SY200_.jpg",
-        alt: "language",
-      },
-      {
-        id:uuid(),
-        imgUrl:
-          " https://m.media-amazon.com/images/I/31aYZs3ij5L._AC_SY200_.jpg",
-        alt: "Currency",
-      },
-      {
-        id:uuid(),
-        imgUrl:
-          "https://m.media-amazon.com/images/I/51XFpX+XFpL._AC_SY200_.jpg",
-        alt: "Bubble",
-      },
-      {
-        id:uuid(),
-        imgUrl:
-          " https://m.media-amazon.com/images/I/41MUBAPIW7L._AC_SY200_.jpg",
-        alt: "Bubble",
-      },
-      {
-        id:uuid(),
-        imgUrl:
-          " https://m.media-amazon.com/images/I/51SDyKBr-HL._AC_SY200_.jpg",
-        alt: "Bubble",
-      },
-      {
-        id:uuid(),
-        imgUrl:
-          " https://m.media-amazon.com/images/I/41jN4V0VJEL._AC_SY200_.jpg",
-        alt: "Bubble",
-      },
-    ],
-  },
-];
 
-const BestSellers = () => {
+const BestSellersSection = () => {
+  const products = useSelector(selectProducts);
+  const imgs = products
+    .slice(13, 19)
+    .map((img) => ({ id: img.id, alt: img.title, imgUrl: img.imgUrl }));
+  const topSellers = [{
+    id: uuid(),
+    title: "Most Popular Sellers",
+    linkInfo: "Shop now",
+    imgs,
+  }];
+
   return (
-    <div className="bestSellers">
-      {discovers.map(({ id, ...props }) => (
+    <div className="discover">
+      {topSellers?.map(({ id, ...props }) => (
         <SharedCarousel key={id} {...props} />
       ))}
     </div>
   );
 };
 
-export default BestSellers;
+export default BestSellersSection;

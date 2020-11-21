@@ -21,8 +21,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
         description:
-          " The three-sided ultrathin bezel design in 4K UHD (3840 x 2160) resolution lets you enjoy immersive viewing in incredible clarity and fine detail with 4 times the resolution of Full HD        Be in the action: The curved 1800R screen expands your field of vision and provides a wrap-around view for an immersive movie experience.        Easy on the eyes: This TÜV-certified monitor has a flicker-free screen with ComfortView, a feature that reduces harmful blue light emissions and optimizes eye comfort.        Adjust to your comfort: Pivot, tilt, swivel and adjust the height of your monitor for a comfortable setup all day long. Or choose from a variety of mounts and stands, including VESA, for even more flexibility.",
+          " The three-sided ultrathin bezel design in 4K UHD (3840 x 2160) resolution lets you enjoy immersive viewing in incredible clarity and fine detail with 4 times the resolution of Full HD;Be in the action: The curved 1800R screen expands your field of vision and provides a wrap-around view for an immersive movie experience;Easy on the eyes: This TÜV-certified monitor has a flicker-free screen with ComfortView, a feature that reduces harmful blue light emissions and optimizes eye comfort;Adjust to your comfort: Pivot, tilt, swivel and adjust the height of your monitor for a comfortable setup all day long. Or choose from a variety of mounts and stands, including VESA, for even more flexibility.",
       },
       {
         title: "Echo Dot (3rd Gen) - Smart speaker with alexa - Plum",
@@ -32,12 +52,27 @@ const MOCKUP_DATA = [
         rate: 4,
         count: 280,
         imgUrl:
-          "https://m.media-amazon.com/images/I/61V25P7mlyL._AC_UY218_.jpg",
+          "https://m.media-amazon.com/images/I/51S-1Q653EL._AC_UY218_.jpg",
         active: false,
         upcoming: true,
         missed: false,
         featured: true,
-        description: "Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small spaces.Improved speaker quality - Better speaker quality than Echo Dot Gen 2 for richer and louder sound. Pair with a second Echo Dot for stereo sound.Voice control your music - Stream songs from Amazon Music, Apple Music, Spotify, Sirius XM, and others.Ready to help - Ask Alexa to play music, answer questions, read the news, check the weather, set alarms, control compatible smart home devices, and more.Voice control your smart home - Turn on lights, adjust thermostats, lock doors, and more with compatible connected devices. Create routines to start and end your day. Connect with others - Call almost anyone hands-free. Instantly drop in on other rooms in your home or make an announcement to every room with a compatible Echo device.        Alexa has skills - With tens of thousands of skills and counting, Alexa is always getting smarter and adding new skills like tracking fitness, playing games, and more.        Designed to protect your privacy - Built with multiple layers of privacy protections and controls, including a microphone off button that electronically disconnects the microphones",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/31vR5BpdihL._AC_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31vR5BpdihL._AC_US40_AA50_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/51uvFR8imZL._AC_SL1001_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31m6QaAP3zL._AC_US40_AA50_.jpg",
+          },
+        ],
+        description:
+          "Meet Echo Dot - Our most popular smart speaker with a fabric design;It is our most compact smart speaker that fits perfectly into small spaces;Improved speaker quality - Better speaker quality than Echo Dot Gen 2 for richer and louder sound; Pair with a second Echo Dot for stereo sound;Voice control your music - Stream songs from Amazon Music, Apple Music, Spotify, Sirius XM, and others.Ready to help - Ask Alexa to play music, answer questions, read the news, check the weather, set alarms, control compatible smart home devices, and more;Voice control your smart home - Turn on lights, adjust thermostats, lock doors, and more with compatible connected devices. Create routines to start and end your day. Connect with others - Call almost anyone hands-free. Instantly drop in on other rooms in your home or make an announcement to every room with a compatible Echo device;Alexa has skills - With tens of thousands of skills and counting, Alexa is always getting smarter and adding new skills like tracking fitness, playing games, and more; Designed to protect your privacy - Built with multiple layers of privacy protections and controls, including a microphone off button that electronically disconnects the microphones",
       },
       {
         title: "Fire TV Stick 4K bundle with Echo Dot (3rd Gen - Charcoal)",
@@ -52,8 +87,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
         description:
-          "The most powerful 4K streaming media stick.        Watch favorites from Netflix, YouTube, Prime Video, Disney+, Apple TV, HBO, and more. Stream for free with Pluto, IMDB TV, and more.        Launch and control content with the Alexa Voice Remote.        Enjoy brilliant picture with access to 4K Ultra HD, Dolby Vision, HDR, and HDR10+.        Choose from 500,000 movies and TV episodes.        More storage for apps and games than any other streaming media stick.        Experience tens of thousands of channels, apps, and Alexa skills.        Alexa on Fire TV provides the most comprehensive voice experience of any streaming media player.        Amazon Prime members get unlimited access to thousands of movies and TV episodes.        Live Q&A with culinary expert and more with a 1-year complimentary Food Network Kitchen subscription.",
+          "The most powerful 4K streaming media stick.;Watch favorites from Netflix, YouTube, Prime Video, Disney+, Apple TV, HBO, and more; Stream for free with Pluto, IMDB TV, and more.;Launch and control content with the Alexa Voice Remote.;Enjoy brilliant picture with access to 4K Ultra HD, Dolby Vision, HDR, and HDR10+.;Choose from 500,000 movies and TV episodes.;More storage for apps and games than any other streaming media stick.        Experience tens of thousands of channels, apps, and Alexa skills.;Alexa on Fire TV provides the most comprehensive voice experience of any streaming media player.  Amazon Prime members get unlimited access to thousands of movies and TV episodes.  Live Q&A with culinary expert and more with a 1-year complimentary Food Network Kitchen subscription.",
       },
       {
         title:
@@ -69,8 +124,28 @@ const MOCKUP_DATA = [
         upcoming: true,
         missed: false,
         featured: true,
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
         description:
-          "Tenth-generation quad-core Intel Core i5 processor        Brilliant Retina display with True Tone technology        Backlit Magic Keyboard        Touch Bar and Touch ID        Intel Iris Plus Graphics        Ultrafast SSD        Four Thunderbolt 3 (USB-C) ports        Up to 10 hours of battery life        802.11ac Wi-Fi        Force Touch trackpad",
+          "Tenth-generation quad-core Intel Core i5 processor;Brilliant Retina display with True Tone technology;Backlit Magic Keyboard;Touch Bar and Touch ID;Intel Iris Plus Graphics;Ultrafast SSD;Four Thunderbolt 3 (USB-C) ports;Up to 10 hours of battery life;802.11ac Wi-Fi;Force Touch trackpad",
       },
       {
         title:
@@ -86,8 +161,28 @@ const MOCKUP_DATA = [
         upcoming: true,
         missed: false,
         featured: true,
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
         description:
-          "10th Gen Intel Core i7-10510U (1.8 GHz base frequency, up to 4.9 GHz base with Intel Turbo Boost Technology, 8 MB cache, 4 cores)         diagonal HD SVA BrightView micro-edge WLED-backlit (1366 x 768) Display; Intel UHD Graphics        8GB DDR4-2666MHz SDRAM Memory for full-power multitasking; 128GB SSD; Ideal for Home, Student, Professionals, Small Business, School Education, and Commercial Enterprise, Online Class, Google Classroom, Remote Learning, Zoom Ready.        802.11b/g/n (1x1) Wi-Fi and Bluetooth 4.2 combo; 1 USB 3.1 Gen 1 Type-C (Data Transfer Only, 5 Gb/s signaling rate); 2 USB 3.1 Gen 1 Type-A (Data Transfer Only); 1 RJ-45; 1 AC smart pin; 1 HDMI 1.4b; 1 headphone/microphone combo; 1 multi-format SD media card reader        ▌Authorized BROAGE Bundle ▌Bundled with BROAGE MousePad, Authorized Sellers ONLY. Windows 10 Home 64-Bit, Natural silver",
+          "10th Gen Intel Core i7-10510U (1.8 GHz base frequency, up to 4.9 GHz base with Intel Turbo Boost Technology, 8 MB cache, 4 cores)  ;  diagonal HD SVA BrightView micro-edge WLED-backlit (1366 x 768) Display; Intel UHD Graphics;   8GB DDR4-2666MHz SDRAM Memory for full-power multitasking; 128GB SSD; Ideal for Home, Student, Professionals, Small Business, School Education, and Commercial Enterprise, Online Class, Google Classroom, Remote Learning, Zoom Ready.;   802.11b/g/n (1x1) Wi-Fi and Bluetooth 4.2 combo; 1 USB 3.1 Gen 1 Type-C (Data Transfer Only, 5 Gb/s signaling rate); 2 USB 3.1 Gen 1 Type-A (Data Transfer Only); 1 RJ-45; 1 AC smart pin; 1 HDMI 1.4b; 1 headphone/microphone combo; 1 multi-format SD media card reader;   ▌Authorized BROAGE Bundle ▌Bundled with BROAGE MousePad, Authorized Sellers ONLY. Windows 10 Home 64-Bit, Natural silver",
       },
     ],
   },
@@ -109,7 +204,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: true,
         featured: true,
-        description: "Superb DSLM image quality without the bulk and weight of traditional DSLRs        Never miss a photo with three unique 4K ultra HD video pause and save 4K photo modes        Fast and precise auto focusing tracks the subject; Focus mode AFS (single) / AFF (flexible) / AFC (continuous) / MF, AF mode face/eye detection / tracking / 49 area / custom Multi / 1 area / pinpoint        Class leading, ultra compact, interchangeable lens and accessory option; HDMI: microHDMI TypeD / VIERA Link,video: Auto / 4K / 1080p / 1080i / 720p / 480p, Audio: stereo        Unwire your creativity with integrated Wi Fi sharing",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "Superb DSLM image quality without the bulk and weight of traditional DSLRs; Never miss a photo with three unique 4K ultra HD video pause and save 4K photo modes; Fast and precise auto focusing tracks the subject; Focus mode AFS (single) / AFF (flexible) / AFC (continuous) / MF, AF mode face/eye detection / tracking / 49 area / custom Multi / 1 area / pinpoint; Class leading, ultra compact, interchangeable lens and accessory option; HDMI: microHDMI TypeD / VIERA Link,video: Auto / 4K / 1080p / 1080i / 720p / 480p, Audio: stereo; Unwire your creativity with integrated Wi Fi sharing",
       },
       {
         title:
@@ -125,7 +241,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
-        description: "This Grace Photo Camera Bundle Comes Complete With Manufacturer Supplied Accessories(U.S. Compatible) and a 1 Year Seller Provided Warranty, Package Includes:        Nikon D3500 DSLR Camera (International Version) 24.2MP DX-Format CMOS Sensor; EXPEED 4 Image Processor; No Optical Low-Pass Filter; Native ISO 100-25600; 5 fps Shooting; 3.0 921k-Dot LCD Monitor; Full HD 1080p Video Recording at 60 fps; Multi-CAM 1000 11-Point AF System; SnapBridge Bluetooth Connectivity        Nikon AF-P DX NIKKOR 18-55mm f/3.5-5.6G VR Lens - F-Mount Lens/DX Format , 27-82.5mm (35mm Equivalent) , Super Integrated Coating , Pulse Stepping Motor AF System , Nikon VR Image Stabilization , Access Lens Settings in Camera Menu , Ro",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "This Grace Photo Camera Bundle Comes Complete With Manufacturer Supplied Accessories(U.S. Compatible) and a 1 Year Seller Provided Warranty; Package Includes:        Nikon D3500 DSLR Camera (International Version) 24.2MP DX-Format CMOS Sensor; EXPEED 4 Image Processor; No Optical Low-Pass Filter; Native ISO 100-25600; 5 fps Shooting; 3.0 921k-Dot LCD Monitor; Full HD 1080p Video Recording at 60 fps; Multi-CAM 1000 11-Point AF System; SnapBridge Bluetooth Connectivity    Nikon AF-P DX NIKKOR 18-55mm f/3.5-5.6G VR Lens - F-Mount Lens/DX Format , 27-82.5mm (35mm Equivalent) , Super Integrated Coating , Pulse Stepping Motor AF System , Nikon VR Image Stabilization , Access Lens Settings in Camera Menu , Ro",
       },
       {
         title:
@@ -141,7 +278,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
-        description: "The advanced video capabilities of the Power Shot G7 X Mark II camera can capture moments in the quality they deserve        Features a large 1.0 inch, 20.1 Megapixel CMOS sensor that helps capture high quality images and videos with a wide dynamic range. Autofocus system features ttl autofocus and manual focus. Operating temperature is 0 to 40 degree celsius. Note charging time varies considerably depending on the remaining battery power        An aperture value of f/1.8 at the wide angle and f/2.8 when fully zoomed to a factor of 4.2x (24 100 millimeter), this lens equipped to capture a variety of situations with precision        High resolution, 3.0 inches LCD monitor that tilts up 180 degrees and down 45 degrees is ideal for self portraits and capturing pictures at high and low angles with ease        Built in Wi Fi for on the go convenience and the ability to easily post your images to select social networking and media sites        With the ability to shoot continuously at up to 8 fps, it can help you capture incredible images with nearly no time wasted",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "The advanced video capabilities of the Power Shot G7 X Mark II camera can capture moments in the quality they deserve   ; Features a large 1.0 inch, 20.1 Megapixel CMOS sensor that helps capture high quality images and videos with a wide dynamic range. Autofocus system features ttl autofocus and manual focus. Operating temperature is 0 to 40 degree celsius. Note charging time varies considerably depending on the remaining battery power;    An aperture value of f/1.8 at the wide angle and f/2.8 when fully zoomed to a factor of 4.2x (24 100 millimeter), this lens equipped to capture a variety of situations with precision   ;   High resolution, 3.0 inches LCD monitor that tilts up 180 degrees and down 45 degrees is ideal for self portraits and capturing pictures at high and low angles with ease        Built in Wi Fi for on the go convenience and the ability to easily post your images to select social networking and media sites   ;   With the ability to shoot continuously at up to 8 fps, it can help you capture incredible images with nearly no time wasted",
       },
       {
         title: "Ricoh Theta V 360 Spherical Camera",
@@ -156,7 +314,28 @@ const MOCKUP_DATA = [
         upcoming: true,
         missed: false,
         featured: true,
-        description: "Theta V shoots hi-def smooth 360 Degree video at 30 fps @ 3840 x 1920 pixels or 4K. It supports the H.264 file format for video recording ; Remote release: CA-3-compatible        Hi-res 360 Degree spherical stills & video with improvements to the image quality. New Qualcomm Snapdragon processor has completely enhanced the exposure accuracy and white balance algorithm. Object distance- Approx. 10cm - ∞ (from front of lens).Lens configuration:7 elements in 6 groups        Theta has a 4-channel microphone that supports 360 Degree spatial audio recording built in Omnidirectional audio is recorded not just in the horizontal direction but also in the vertical direction. Storage temperature range - -20°C - 60°C        The world’s-first Remote Playback capable fully spherical camera allows users to wirelessly playback 360 Degree images and videos on a large-screen display Using a compatible wireless display adapter        Wireless LAN transfer speed (WLAN, MAX): 2.4GHz, 3mm: 20Mbps; 2.4GHz, 10mm: 10Mbps; 5GHz, 3mm: 50Mbps; 5GHz, 10mm: 10Mbps. The camera can always be connected to a smartphone using Bluetooth low energy (BLE) This function provides improvements in usability and power consumption",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "Theta V shoots hi-def smooth 360 Degree video at 30 fps @ 3840 x 1920 pixels or 4K. It supports the H.264 file format for video recording ; Remote release: CA-3-compatible ; Hi-res 360 Degree spherical stills & video with improvements to the image quality. New Qualcomm Snapdragon processor has completely enhanced the exposure accuracy and white balance algorithm. Object distance- Approx. 10cm - ∞ (from front of lens).Lens configuration:7 elements in 6 groups        Theta has a 4-channel microphone that supports 360 Degree spatial audio recording built in Omnidirectional audio is recorded not just in the horizontal direction but also in the vertical direction. Storage temperature range - -20°C - 60°C        The world’s-first Remote Playback capable fully spherical camera allows users to wirelessly playback 360 Degree images and videos on a large-screen display Using a compatible wireless display adapter ; Wireless LAN transfer speed (WLAN, MAX): 2.4GHz, 3mm: 20Mbps; 2.4GHz, 10mm: 10Mbps; 5GHz, 3mm: 50Mbps; 5GHz, 10mm: 10Mbps. The camera can always be connected to a smartphone using Bluetooth low energy (BLE) This function provides improvements in usability and power consumption",
       },
       {
         title:
@@ -172,7 +351,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
-        description: "20MP live MOS sensor        Portable, weather sealed design        121-point all-cross-type on-chip phase detection AF        Compact, in-body 5-axis image stabilization (up to approx. 5.5 EV steps of compensation)        50MP tripod high-res shot",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "20MP live MOS sensor  ; Portable, weather sealed design;   121-point all-cross-type on-chip phase detection AF;   Compact, in-body 5-axis image stabilization (up to approx. 5.5 EV steps of compensation);   50MP tripod high-res shot",
       },
     ],
   },
@@ -193,7 +393,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
-        description: "Automatically on, automatically connected        Easy setup for all your Apple devices        Quick access to Siri by saying “Hey Siri”        Double-tap to play or skip forward        New Apple H1 headphone chip delivers faster wireless connection to your devices",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "Automatically on, automatically connected  ; Easy setup for all your Apple devices;   Quick access to Siri by saying “Hey Siri”;   Double-tap to play or skip forward;   New Apple H1 headphone chip delivers faster wireless connection to your devices",
       },
       {
         title: "Sony Noise Cancelling Headphones WH1000XM3",
@@ -208,7 +429,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
-        description: "",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "Automatically on, automatically connected  ; Easy setup for all your Apple devices;   Quick access to Siri by saying “Hey Siri”;   Double-tap to play or skip forward;   New Apple H1 headphone chip delivers faster wireless connection to your devices",
       },
       {
         title:
@@ -224,7 +466,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
-        description: "",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "Automatically on, automatically connected  ; Easy setup for all your Apple devices;   Quick access to Siri by saying “Hey Siri”;   Double-tap to play or skip forward;   New Apple H1 headphone chip delivers faster wireless connection to your devices",
       },
       {
         title:
@@ -240,7 +503,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
-        description: "",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "Automatically on, automatically connected  ; Easy setup for all your Apple devices;   Quick access to Siri by saying “Hey Siri”;   Double-tap to play or skip forward;   New Apple H1 headphone chip delivers faster wireless connection to your devices",
       },
       {
         title:
@@ -256,7 +540,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
-        description: "",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "Automatically on, automatically connected  ; Easy setup for all your Apple devices;   Quick access to Siri by saying “Hey Siri”;   Double-tap to play or skip forward;   New Apple H1 headphone chip delivers faster wireless connection to your devices",
       },
     ],
   },
@@ -277,7 +582,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
-        description: "",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "Automatically on, automatically connected  ; Easy setup for all your Apple devices;   Quick access to Siri by saying “Hey Siri”;   Double-tap to play or skip forward;   New Apple H1 headphone chip delivers faster wireless connection to your devices",
       },
       {
         title: "Authentic Originals Sueded Fleece Pullover",
@@ -292,7 +618,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
-        description: "",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "Automatically on, automatically connected  ; Easy setup for all your Apple devices;   Quick access to Siri by saying “Hey Siri”;   Double-tap to play or skip forward;   New Apple H1 headphone chip delivers faster wireless connection to your devices",
       },
       {
         title: "Half Dome Hoodie, TNF",
@@ -307,7 +654,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
-        description: "",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "Automatically on, automatically connected  ; Easy setup for all your Apple devices;   Quick access to Siri by saying “Hey Siri”;   Double-tap to play or skip forward;   New Apple H1 headphone chip delivers faster wireless connection to your devices",
       },
       {
         title: "Modern Series Extreme Motion Straight Fit Tapered Leg Jean",
@@ -322,7 +690,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
-        description: "",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "Automatically on, automatically connected  ; Easy setup for all your Apple devices;   Quick access to Siri by saying “Hey Siri”;   Double-tap to play or skip forward;   New Apple H1 headphone chip delivers faster wireless connection to your devices",
       },
       {
         title: "Graphic Powerblend Fleece Crew",
@@ -337,7 +726,28 @@ const MOCKUP_DATA = [
         upcoming: false,
         missed: false,
         featured: true,
-        description: "",
+        gallery: [
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/81ONemBAVtL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/51ysFSsQSNL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71Xlh2zbPGL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/31uKeRay3dL._AC_US40_.jpg",
+          },
+          {
+            original:
+              "https://images-na.ssl-images-amazon.com/images/I/71dbVPw0nWL._AC_SL1500_.jpg",
+            thumbnail:
+              "https://images-na.ssl-images-amazon.com/images/I/317W6TXlMwL._AC_US40_.jpg",
+          },
+        ],
+        description:
+          "Automatically on, automatically connected  ; Easy setup for all your Apple devices;   Quick access to Siri by saying “Hey Siri”;   Double-tap to play or skip forward;   New Apple H1 headphone chip delivers faster wireless connection to your devices",
       },
     ],
   },

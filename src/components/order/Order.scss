@@ -1,14 +1,22 @@
 .order {
-    padding: 40px;
-    margin: 20px 0;
-    border: 1px solid lightgray;
+    @include breakpoint(m){
+
+        padding: 40px;
+        margin: 20px 0;
+        border: 1px solid lightgray;
+        margin: 5px 0;
+        padding: 10px;
+    }
+    margin-left: -3rem;
     position: relative;
     background-color: white;
 
     &__id {
-        position: absolute;
-        top: 40px;
-        right: 20px;
+        @include breakpoint(l){
+            position: absolute;
+            right: 20px;
+            top: 40px;
+        }
     }
     &__total {
         font-weight: 500;

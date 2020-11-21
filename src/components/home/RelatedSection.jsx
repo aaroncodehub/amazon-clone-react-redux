@@ -5,15 +5,15 @@ import { selectProducts } from "../../redux/productsSlice";
 import { useSelector } from "react-redux";
 
 
-const PopularSection = () => {
+const RelatedSection = () => {
   const products = useSelector(selectProducts);
   const imgs = products
-    .slice(8, 16)
+    .slice(1, 7)
     .map((img) => ({ id: img.id, alt: img.title, imgUrl: img.imgUrl }));
   const topSellers = [{
     id: uuid(),
-    title: "Amazon Top Sellers",
-    linkInfo: "Shop now",
+    title: "Related to Items You've Viewed",
+    linkInfo: "See more",
     imgs,
   }];
 
@@ -26,4 +26,4 @@ const PopularSection = () => {
   );
 };
 
-export default PopularSection;
+export default RelatedSection;

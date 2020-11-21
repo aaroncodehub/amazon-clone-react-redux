@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { selectUser } from "../../redux/userSlice";
 import { useSelector } from "react-redux";
 import RouterLink from "../link/RouterLink";
@@ -11,35 +11,87 @@ import { InputGroup, FormControl, Form } from "react-bootstrap";
 import { auth } from "../../firebase.utils";
 import { selectCartItemsCount } from "../../redux/cartSelector";
 import { useNavigate } from "react-router-dom";
+import { Drawer,Divider} from "antd";
+
+
 
 const Header = () => {
+  const [showMenu, setShowMenu] = useState(false);
   const user = useSelector(selectUser);
   const cartCount = useSelector((state) => selectCartItemsCount(state));
 
+
   const navigate = useNavigate();
 
+  
   const signOut = () => {
     if (user) auth.signOut();
   };
 
   const handleSearch = (e) => {
-    e.preventDefault();
-    navigate("/shop");
+   e.preventDefault();
+       navigate("/shop");
   };
   return (
     <>
+      <Drawer
+        title={`Hello, ${user ? user.name : "Sign In"}`}
+        headerStyle={{ backgroundColor: "#232F3E", color: "#fff" }}
+        width={360}
+        placement="left"
+        onClose={() => setShowMenu(false)}
+        visible={showMenu}
+        footer={
+          <div className="menuFooter">
+            <p>Help & Settings</p>
+            <p>Account</p>
+            <p>Customer Service</p>
+            <p>Sign Out</p>
+          </div>
+        }
+      >
+        <div className="menu__body">
+          <p className='menu__body__title'>Treading</p>
+          <p>Best Sellers</p>
+          <p>New Releases</p>
+          <p>Movers and Shakers</p>
+          <Divider/>
+
+          <p className='menu__body__title'>Digital Content And Devices</p>
+          <p>Amazon Fire TV</p>
+          <p>Amazon Prime Video</p>
+          <p>Amazon Music</p>
+          <p>Audible Audiobooks</p>
+
+          <Divider />
+          <p className='menu__body__title'>Shop By Department</p>
+          <p>Books</p>
+          <p>Music, Movies & Games</p>
+          <p>Computers</p>
+          <p>Electronics</p>
+          <p>Home</p>
+          <p>Baby</p>
+          <p>Toys & Game</p>
+          <p>Women's Clothing</p>
+          <p>Men's Clothing</p>
+          <p>Shoes</p>
+
+        </div>
+      </Drawer>
+
       <div className="header">
         <div className="header__menu">
-          <RouterLink to="/shop">
-            <Menu className="header__menu__icon" />
-          </RouterLink>
+          <Menu
+            onClick={() => setShowMenu(true)}
+            className="header__menu__icon"
+          />
         </div>
         <RouterLink to="/">
           <div className="header__logo">
             <img src={logo} alt="logo" />
           </div>
         </RouterLink>
-        <div className="header__search">
+        <div className="header__search">         
           <Form>
             <InputGroup>
               <InputGroup.Prepend>
@@ -69,9 +121,11 @@ const Header = () => {
             </div>
           </RouterLink>
           <RouterLink to="/orders">
-            <div className="header__nav__option">
+      <div className="header__nav__option">
               <span>returns</span>
-              <span>&orders</span>
+   
+   
+             <span>&orders</span>
             </div>
           </RouterLink>
           <RouterLink to="/checkout">
@@ -94,6 +148,8 @@ const Header = () => {
           <div className="sub-header__link">
             <span>Today's Deals</span>
             <span>Customer Service</span>
+  
+  
             <span>Gift Cards</span>
             <span>Registry</span>
             <span>Sell</span>

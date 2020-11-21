@@ -4,13 +4,13 @@ import CheckoutCard from "./../card/CheckoutCard";
 import CurrencyFormat from "react-currency-format";
 
 const Order = ({ order }) => {
-  console.log(order);
+ 
   return (
     <div className="order">
       <h2>Order</h2>
       <p>{moment.unix(order.data.created).format("MMMM Do YYYY,h:mma")}</p>
       <p className="order__id">
-        <small>{order.id}</small>
+        <small>Order ID: {order.id}</small>
       </p>
       {order.data.cartItems &&
         order.data.cartItems.map(({ productId, ...props }) => (

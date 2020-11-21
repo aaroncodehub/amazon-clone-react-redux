@@ -28,7 +28,7 @@ const Footer = () => {
           <p>Reload Your Balance</p>
           <p>Amazon Currency Converter</p>
         </div>
-        <div>
+        {/* <div>
           <p className="footer__title">Let Us Help You</p>
           <p>Amazon and Covid-19</p>
           <p>Your Account</p>
@@ -38,7 +38,7 @@ const Footer = () => {
           <p>Manage Your Content and Devices</p>
           <p>Amazon Assistant</p>
           <p>Help</p>
-        </div>
+        </div> */}
       </div>
       <div className="footer__copyright">
         <div className="footer__copyright__info">

@@ -7,7 +7,7 @@ const recommend = [
     title: "Find unique gifts",
     imgUrl:
       "https://images-na.ssl-images-amazon.com/images/G/01/US-hq/2019/img/Social_Shopping/B00YBC17FK_260._CB442485249_SY260_.jpg",
-    linkInfo: "See more gif ideas",
+    linkInfo: "See more gift ideas",
   },
   {id:uuid(),
     title: "Inexpensive finds",
@@ -33,7 +33,7 @@ const RecommendSection = () => {
   return (
     <div className="shop-by-section">
       {recommend.map(({ id, ...props }) => (
-        <SharedCard key={id} {...props} />
+        <SharedCard key={id}  {...props} />
       ))}
     </div>
   );

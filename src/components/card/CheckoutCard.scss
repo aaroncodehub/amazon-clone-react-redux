@@ -1,8 +1,13 @@
 .checkout-card {
   display: flex;
- 
+
   &__img {
+    @include breakpoint(l) {
+      width: 8rem;
+      margin: 1rem;
+    }
     width: 8rem;
+    object-fit: contain;
     margin: 1rem;
   }
   &__body {
@@ -48,7 +53,10 @@
   }
   &__price {
     font-weight: 600;
-    padding-left: 6rem;
+    @include breakpoint(l) {
+      padding-left: 6rem;
+    }
+    padding-left: .6rem;
   }
   &__content {
     flex-grow: 1;

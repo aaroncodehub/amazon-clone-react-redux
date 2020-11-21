@@ -29,6 +29,10 @@
       flex: 0.8;
   }
 
+  &__address p {
+    font-size: 1.2rem;
+  }
+
   &__details > form {
     max-width: 400px;
   }
@@ -46,5 +50,13 @@
     margin-top: 10px;
     border-color: #a88724 #9c7e31 #846a29;
     color: #111;
+  }
+
+  &__priceContainer {
+    margin-top: 2rem;
+
+    & > p {
+      color: lightgray;
+    }
   }
 }

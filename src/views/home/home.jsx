@@ -6,11 +6,10 @@ import homeHeroAlexa from "../../assets/home-bg-alexa.jpg";
 import homeHeroNZ from '../../assets/home-bg-nz.jpg'
 import { Carousel } from "react-bootstrap";
 import ShopBySection from "../../components/home/ShopBySection";
-import DiscoverSection from "../../components/home/DiscoverSection";
 import PopularSection from "../../components/home/PopularSection";
-import TrendingSection from './../../components/home/TrendingSection';
 import RecommendSection from "../../components/home/RecommendSection";
 import BestSellers from './../../components/home/BestSellers';
+import RelatedSection from "../../components/home/RelatedSection";
 
 const Home = () => {
   return (
@@ -58,14 +57,11 @@ const Home = () => {
         <div className="home__shop">
           <ShopBySection/>
         </div>
-        <div className="home__discover">
-          <DiscoverSection />
+        <div className="home__popular">
+          <RelatedSection/>
         </div>
         <div className="home__popular">
           <PopularSection/>
-        </div>
-        <div className="home__trending">
-          <TrendingSection/>
         </div>
         <div className="home__recommend">
           <RecommendSection/>

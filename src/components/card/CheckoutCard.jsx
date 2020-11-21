@@ -49,7 +49,7 @@ const CheckoutCard = ({
             <span>Enable for FREE Delivery </span>
           </div>
           {
-            !hiddenAction &&           <div className="checkout-card__action">
+            !hiddenAction &&    <div className="checkout-card__action">
             <div className="checkout-card__action__qty">
               <Form>
                 <Form.Group>

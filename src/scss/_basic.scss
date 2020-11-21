@@ -22,3 +22,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.ant-btn-primary {
+  background-color: $button-color !important;
+  border: 1px solid $button-border !important;
+  color: $primary-color-light !important;
+}
+
+.ant-btn:hover {
+  border: 1px solid $button-border !important;
+  color: $primary-color-light !important;
+}
+
+.anticon-close {
+  color: white !important;
+}
+
+.ant-drawer-title {
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 1.2rem !important;
+}
+

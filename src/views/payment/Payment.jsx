@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectUser } from "../../redux/userSlice";
 import { emptyCart } from "../../redux/cartSlice";
 import CheckoutCard from "../../components/card/CheckoutCard";
+import Spinner from "react-bootstrap/Spinner";
 import {
   selectCartItemsCount,
   selectSubtotal,
@@ -34,18 +35,26 @@ const Payment = () => {
   const elements = useElements();
 
   useEffect(() => {
-    const getClientSecret = async () => {
-      const response = await axios({
-        method: "post",
-        // Stripe expects the total in a currencies subunits
-        url: `/payments/create?total=${subtotal * 100}`,
-      });
+    let unsubscribe = false;
 
-      setClientSecret(response.data.clientSecret);
+    const getClientSecret = async () => {
+      try {
+        const response = await axios({
+          method: "post",
+          // Stripe expects the total in a currencies subunits
+          url: `/payments/create/${subtotal * 100}`,
+        });
+        if (!unsubscribe) setClientSecret(response.data.clientSecret);
+      } catch (error) {
+        console.log(error);
+      }
     };
     getClientSecret();
+    return () => {
+      unsubscribe = true;
+    };
   }, [subtotal]);
-console.log(clientSecret)
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     setProcessing(true);
@@ -58,7 +67,7 @@ console.log(clientSecret)
       })
       .then(({ paymentIntent }) => {
         // paymentIntent = payment confirmation
-        db.collection("users")
+        db.collection("amazonUsers")
           .doc(user?.uid)
           .collection("orders")
           .doc(paymentIntent.id)
@@ -71,7 +80,7 @@ console.log(clientSecret)
         setError(null);
         setProcessing(false);
         dispatch(emptyCart());
-        navigate("/orders");
+        navigate(`/success/${paymentIntent.id}`);
       });
   };
 
@@ -82,6 +91,7 @@ console.log(clientSecret)
 
   return (
     <div className="payment">
+      
       <div className="payment__container">
         <h1>
           Checkout (<Link to="/checkout">{cartCount} items</Link>)
@@ -121,6 +131,7 @@ console.log(clientSecret)
             <form onSubmit={handleSubmit}>
               <CardElement onChange={handleChange} />
               <div className="payment__priceContainer">
+                <p>Enter 4242 4242 4242 4242 as the card number.</p>
                 <CurrencyFormat
                   value={subtotal}
                   displayType={"text"}
@@ -134,7 +145,19 @@ console.log(clientSecret)
                   )}
                 />
                 <button disabled={processing || disabled || succeeded}>
-                  <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
+                  <span>
+                    {processing ? (
+                      <Spinner
+                        as="span"
+                        animation="grow"
+                        size="sm"
+                        role="status"
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      "Buy Now"
+                    )}
+                  </span>
                 </button>
               </div>
               {error && <div>{error}</div>}

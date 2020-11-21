@@ -1,5 +1,8 @@
 .checkout {
-  display: flex;
+  @include breakpoint(l){
+    display: flex;
+  }
+  padding: 1rem;
 
   &__cart {
     flex-grow: 1;

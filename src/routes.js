@@ -13,6 +13,8 @@ import Payment from "./views/payment/Payment";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./views/orders/Orders";
+import Mockup from "./mockup";
+import Success from "./views/payment/Success";
 
 const promise = loadStripe(
   "pk_test_51HeTtQImEgmfO9dx3rV5DTtE8sIiZOUG8KZbdXdfOEAzOG54ej7Xivl2kXmgMrHGV8dLRSlLioJ56v4KbB0bkMnP00UWd0uuAL"
@@ -39,6 +41,14 @@ const routes = [
       {
         path: 'orders',
         element:<Orders/>
+      },
+      {
+        path: 'success/:orderId',
+        element:<Success/>
+      },
+      {
+        path: 'mockup',
+        element: <Mockup/>
       },
       {
         path: 'product/:productId',

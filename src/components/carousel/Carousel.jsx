@@ -6,13 +6,29 @@ import { Card, Button } from "react-bootstrap";
 import "./Carousel.scss";
 import RouterLink from "./../link/RouterLink";
 
-const SharedCarousel = ({ title, imgs, alt, linkInfo }) => {
+const SharedCarousel = ({ title, imgs, alt, linkInfo,id }) => {
+ 
+  let slidesToShow 
+  const width =
+  window.innerWidth ||
+  document.documentElement.clientWidth ||
+  document.body.clientWidth;
+if (width > 768) {
+ slidesToShow = 5
+} else if(width ===768) {
+  slidesToShow = 4
+} else {
+  slidesToShow =1
+  }
+
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow,
     slidesToScroll: 1,
   };
+
+  
   return (
     <Card className="carousel">
       <Card.Body>
@@ -27,7 +43,7 @@ const SharedCarousel = ({ title, imgs, alt, linkInfo }) => {
         <Slider {...settings}>
           {imgs.map((el, index) => (
             <div key={index}>
-              <RouterLink to="/shop">
+              <RouterLink to={`/product/${el.id}`}>
                 <img
                   src={el.imgUrl}
                   alt={alt}
