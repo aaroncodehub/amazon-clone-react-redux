@@ -7,10 +7,12 @@ const functions = require("firebase-functions");
 //  response.send("Hello from Firebase!");
 // });
 
+// set env vars: gcloud functions deploy FUNCTION_NAME --set-env-vars FOO=bar , get env vars : process.env.FOO
+
 const express = require("express");
 const cors = require("cors");
 const stripe = require("stripe")(
-  "sk_test_51HeTtQImEgmfO9dxsYTv9vHitaqlfq2bW9QkRUzO89Uya2IlzyiJxbMiPY0GNF7sfaKMdWw8GarT0oxCjPZ9jTAf00I0kzR0bU"
+  process.env.STRIPE_KEY
 );
 
 // - App Config

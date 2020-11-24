@@ -102,7 +102,7 @@ const Payment = () => {
           </div>
           <div className="payment__address">
             <p>{user?.name}</p>
-            <p>22 porana rd </p>
+            <p>18 Great South Rd </p>
             <p>Auckland , New Zealand</p>
           </div>
         </div>

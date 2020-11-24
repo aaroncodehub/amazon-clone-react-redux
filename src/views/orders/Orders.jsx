@@ -4,10 +4,13 @@ import { selectUser } from "../../redux/userSlice";
 import { useSelector } from "react-redux";
 import Order from "./../../components/order/Order";
 import Spinner from "react-bootstrap/Spinner";
+import { useNavigate } from "react-router-dom";
+import { Result } from "antd";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const user = useSelector(selectUser);
+  const navigate = useNavigate();
 
   useEffect(() => {
     let mounted = true;
@@ -28,13 +31,23 @@ const Orders = () => {
         });
     } else {
       setOrders([]);
+      navigate("/auth");
     }
     return () => (mounted = false);
-  }, [user]);
+  }, [user, navigate]);
 
   return (
     <div className="orders">
-      <h1>Your Orders</h1>
+      {orders.length > 0 ? (
+        <h1>Your Orders</h1>
+      ) : (
+        <Result
+          status="404"
+          title="no order found"
+          subTitle="Oops! you don't have any orders"
+        />
+      )}
+
       <div className="orders__order">
         {orders ? (
           orders.map((order) => <Order order={order} key={order.id} />)

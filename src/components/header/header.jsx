@@ -71,10 +71,7 @@ const Header = () => {
           <p>Electronics</p>
           <p>Home</p>
           <p>Baby</p>
-          <p>Toys & Game</p>
-          <p>Women's Clothing</p>
-          <p>Men's Clothing</p>
-          <p>Shoes</p>
+
 
         </div>
       </Drawer>
