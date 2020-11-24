@@ -50,6 +50,9 @@ const Header = () => {
           </div>
         }
       >
+        <RouterLink to='/shop'>
+
+        
         <div className="menu__body">
           <p className='menu__body__title'>Treading</p>
           <p>Best Sellers</p>
@@ -72,8 +75,8 @@ const Header = () => {
           <p>Home</p>
           <p>Baby</p>
 
-
-        </div>
+          </div>
+          </RouterLink>
       </Drawer>
 
       <div className="header">
