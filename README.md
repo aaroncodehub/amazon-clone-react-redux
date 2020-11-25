@@ -45,4 +45,4 @@
 
 - Views are on: `localhost:3000`
 
-- Payment API Endpoint: `https://us-central1-github-c5c88.cloudfunctions.net/amazonStripeApi` or <br/> Get a local endpoint: `firebase emulator start`
+- Payment API Endpoint: `https://us-central1-github-c5c88.cloudfunctions.net/amazonStripeApi` or <br/> Get a local endpoint: `firebase emulators:start`
