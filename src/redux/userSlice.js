@@ -6,7 +6,7 @@ import { db } from "../firebase.utils";
 export const userSlice = createSlice({
   name: "user",
   initialState: {
-    user: "",
+    user: null,
   },
   reducers: {
     setUser: (state, action) => {
@@ -15,16 +15,13 @@ export const userSlice = createSlice({
   },
 });
 
-export const fetchUser = (uid) => {
+export const fetchUser =  (uid) => {
   return (dispatch) => {
-    const userRef = db.doc(`amazonUsers/${uid}`);
-    userRef
+  db.collection('amazonUsers').doc(uid)
       .get()
-      .then((doc) => {
+    .then((doc) => {
         if (doc.exists) {
           dispatch(setUser({name: doc.data().name, email: doc.data().email, uid: doc.id}));
-        } else {
-          console.log("No user found !");
         }
       })
       .catch((error) => console.log(error.message));

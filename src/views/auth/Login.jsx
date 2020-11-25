@@ -1,33 +1,26 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Form, Button, Spinner,Alert } from "react-bootstrap";
+import { Form, Button, Spinner } from "react-bootstrap";
 import RouterLink from "../../components/link/RouterLink";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { auth } from "../../firebase.utils";
+import { message } from "antd";
+import { useDispatch } from "react-redux";
+import { fetchUser } from "../../redux/userSlice";
+
 
 const Login = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  const [show, setShow] = useState(false)
-  const [error, setError] = useState('')
+  const dispatch = useDispatch();
 
   return (
     <div className="login">
-       
-       <Alert
-        show={show}
-        variant="danger"
-        onClose={() => setShow(false)}
-        dismissible
-      >
-        <Alert.Heading>Oops! You got an error!</Alert.Heading>
-        <p>{error}</p>
-      </Alert>
       <Formik
         initialValues={{
-          email: "",
-          password: "",
+          email: "demo@amazon.com",
+          password: "Demo@123",
         }}
         validationSchema={Yup.object().shape({
           email: Yup.string()
@@ -44,14 +37,14 @@ const Login = () => {
           setSubmitting(true);
           auth
             .signInWithEmailAndPassword(values.email, values.password)
-            .then(() => {
+            .then((user) => {
+              dispatch(fetchUser(user.user.uid)) 
               setLoading(false);
               navigate("/shop");
             })
-            .catch((error) => {
-              setError(error.message);
+            .catch((err) => {
+              message.error(err.message);
               setLoading(false);
-              setShow(true);
             });
 
           // resetForm();
@@ -68,8 +61,8 @@ const Login = () => {
           isSubmitting,
         }) => (
           <Form className="login__form" onSubmit={handleSubmit}>
-              <p className="login__form--title">Sign-In</p>
-             
+            <p className="login__form--title">Sign-In</p>
+
             <Form.Group>
               <Form.Label className="login__form--lable">Email</Form.Label>
               <Form.Control

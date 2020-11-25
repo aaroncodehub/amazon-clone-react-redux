@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Form, Button, Spinner,Alert } from "react-bootstrap";
+import { Form, Button, Spinner, Alert } from "react-bootstrap";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import RouterLink from "./../../components/link/RouterLink";
-import { setUser } from "../../redux/userSlice.js";
-import { useDispatch } from "react-redux";
 import { auth, createUserProfileDocument } from "../../firebase.utils";
 
 const Register = () => {
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [error, setError] = useState("");
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   return (
@@ -61,17 +58,12 @@ const Register = () => {
           auth
             .createUserWithEmailAndPassword(values.email, values.password)
             .then((user) => {
-              dispatch(
-                setUser({
-                  name: values.name,
-                  email: values.email,
-                  uid: user.user.uid,
-                })
-              );
               createUserProfileDocument(user, { name: values.name });
-              setLoading(false);
             })
-            .then(() => navigate('/auth'))
+            .then(() => {
+              setLoading(false)
+              navigate("/auth");
+            })
             .catch((err) => {
               setError(err.message);
               setLoading(false);

@@ -6,17 +6,16 @@ import routes from "./routes";
 import "./app.scss";
 import { setUser, fetchUser } from "./redux/userSlice";
 
-
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-        
         dispatch(fetchUser(authUser.uid));
+      } else {
+        dispatch(setUser(null));
       }
-      dispatch(setUser(null));
     });
     return () => {
       unsubscribe();
@@ -24,7 +23,6 @@ function App() {
   }, [dispatch]);
 
   const routing = useRoutes(routes);
-
   return <div>{routing}</div>;
 }
 
