@@ -24,6 +24,7 @@
 - [Index Page](https://github-c5c88.firebaseapp.com/)
 - [Register Page](https://github-c5c88.firebaseapp.com/auth/register)
 - [Login Page](https://github-c5c88.firebaseapp.com/auth)
+- [Product Page](http://10.0.0.104:3000/product/hDZ4xItnMf0l3YT17uY5)
 - [Cart Page](https://github-c5c88.firebaseapp.com/checkout)
 - [Checkout Page](https://github-c5c88.firebaseapp.com/checkout)
 - [Payment Page](https://github-c5c88.firebaseapp.com/payment)
@@ -44,4 +45,4 @@
 
 - Views are on: `localhost:3000`
 
-- Payment API Endpoint: `https://us-central1-github-c5c88.cloudfunctions.net/amazonStripeApi` or Get a local endpoint: `firebase emulator start`
+- Payment API Endpoint: `https://us-central1-github-c5c88.cloudfunctions.net/amazonStripeApi` or <br/> Get a local endpoint: `firebase emulator start`
