@@ -21,7 +21,7 @@
 
 ## Demo
 
-- [Index Page](https://github-c5c88.firebaseapp.com/)
+- [Home Page](https://github-c5c88.firebaseapp.com/)
 - [Register Page](https://github-c5c88.firebaseapp.com/auth/register)
 - [Login Page](https://github-c5c88.firebaseapp.com/auth)
 - [Product Page](https://github-c5c88.firebaseapp.com/product/hDZ4xItnMf0l3YT17uY5)
