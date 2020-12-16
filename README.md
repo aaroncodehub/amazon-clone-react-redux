@@ -1,6 +1,7 @@
 ## [Amazon Clone](https://github-c5c88.firebaseapp.com/)
 
 - Views are on: https://github-c5c88.firebaseapp.com <br/>
+
 [![Amazon Clone Index](https://firebasestorage.googleapis.com/v0/b/github-c5c88.appspot.com/o/appScreenshot%2Famazon-index.jpg?alt=media&token=79eb6701-a406-46f7-9216-e32e9b30f2a5)](https://github-c5c88.firebaseapp.com/)
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br/>
   It is a fully functional E-Commerical Amazon clone including user register, user login, user authentication, shop cart management, order management, and payment using STRIPE, etc.
